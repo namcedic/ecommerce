@@ -15,9 +15,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 	return (
 		<html lang='en'>
 			<body className='font-poppins antialiased'>
-				<Header></Header>
-				{children}
-				<Footer></Footer>
+				<div className='flex flex-col min-h-screen'>
+					<Header />
+					<main className='flex-1'>{children}</main>
+					<Footer />
+				</div>
 			</body>
 		</html>
 	)
